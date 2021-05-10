@@ -1,0 +1,47 @@
+# NodeJS
+
+## O que é?
+
+É um ambiente de execução (runtime) assíncrono de JS baseado em eventos.
+
+-- É baseado em eventos.
+
+-- É assíncrono.
+
+-- É um runtime. Não é um framework. Não é uma linguagem.
+
+-- É modular.
+
+-- Única thread, não bloqueante e assíncrona.
+
+#### V8
+Motor que irá rodar o JS na máquina.
+
+-- Interpretador de JS. Converte o código javascript (alto nível) em linguagem de máquina (baixo nível).
+
+-- Foi criado em C++.
+
+-- É focado no Chrome.
+
+-- É baseado nos últimos recursos do JS. 
+
+-- Só são adicinados recursos que não vão quebrar o Node.
+
+-- Não possui DOM, console ou File System.
+
+
+Composição:
+```
+[ Seu código ]
+↓↓↓
+[ V8 ] + [ Módulos Base ] + [ Composições com C++ ] + [ libuv - Event Loop ] + [ Outros Módulos ]
+↓↓↓
+[ Sistema Operacional ]
+```
+
+## Glossário
+
+Runtime: É um ambiente completo para JS separado do Sistema Operacional. 
+
+Framework: Conjunto de regras, padrões e estratégias aplicadas em pacotes ou arquivos de projeto.
+
