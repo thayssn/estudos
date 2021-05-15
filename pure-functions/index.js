@@ -1,24 +1,22 @@
 const array = [1 , 2 , 3];
 
-function notPureAddElementToArray(element) {
+function notAtAllPureAddElementToArray(element) {
     array.push(element)
 }
 
-const array2 = [1 , 2 , 3];
+function notPureAddElementToArray(arr, element) {
+    arr.push(element)
+    return arr;
+}
 
 function pureAddElementToArray(arr, element) {
     return [...arr, element]
 };
 
-function almostPureAddElementToArray(arr, element) {
+function almostPureAddElementToArrayWithRandomElement(arr, element) {
     const random = Math.random();
-    return [...arr, element, random.toFixed(2)]
+    return [...arr, element, random.toFixed(5)]
 };
-
-console.log('almost pure, but random value');
-console.log(almostPureAddElementToArray(array2, 3))
-console.log(almostPureAddElementToArray(array2, 3))
-console.log(almostPureAddElementToArray(array2, 3))
 
 function pureAddElementToArrayWithRandomElement() {
     let random = Math.random()
@@ -28,9 +26,9 @@ function pureAddElementToArrayWithRandomElement() {
     }
 };
 
-const addElementToArrayWithTheSameRandomElement = pureAddElementToArrayWithRandomElement()
-
-console.log('pure, with same random value');
-console.log(addElementToArrayWithTheSameRandomElement(array2, 3))
-console.log(addElementToArrayWithTheSameRandomElement(array2, 3))
-console.log(addElementToArrayWithTheSameRandomElement(array2, 3))
+module.exports = {
+    notPureAddElementToArray,
+    pureAddElementToArray,
+    almostPureAddElementToArrayWithRandomElement,
+    pureAddElementToArrayWithRandomElement
+}
