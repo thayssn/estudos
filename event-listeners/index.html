@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./index.js" defer></script>
+    <title>Document</title>
+    <style>
+        body{
+            background-color: indianred;
+            margin-top: 70px;
+            padding: 0;
+            text-align: center;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        section{
+            width: 100vw;
+            height: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80%;
+            height: 80%;
+            background-color: black;
+            color: white;
+            position: relative;
+            padding: 0;
+            margin: 0;
+        }
+
+
+        .vovo{
+            background-color: lavender;
+            width: 80%;
+            height: 80%;
+        }
+        .vovo:before{
+            content: "👴";
+            position: absolute;
+            left: 10px;
+        }
+
+        .pai{
+            background-color: lightblue;
+            width: 70%;
+            height: 70%;
+            flex-direction: column;
+        }
+
+        .pai:before{
+            content: "👨";
+            position: absolute;
+            left: 10px;
+        }
+
+        .neto{
+            background-color: lightskyblue;
+            width: 35%;
+            height: 35%;
+            margin: 5%;
+        }
+        .neto:before{
+            content: "🧒";
+        }
+        
+        .neto:nth-child(2):before{
+            content: "👶"
+        }
+    </style>
+</head>
+<body>
+    Bubbling and Capturing
+    <section class="regular">
+        <div class="vovo">
+            <div class="pai">
+                <div class="neto"></div>
+            </div>
+        </div>
+    </section>
+
+    Stop Propagation
+    <section class="propagation">
+        <div class="vovo">
+            <div class="pai">
+                <div class="neto"></div>
+            </div>
+        </div>
+    </section>
+
+    Delegation
+    <section class="delegation">
+        <div class="vovo">
+            <div class="pai">
+                <div class="neto"></div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
