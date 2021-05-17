@@ -1,0 +1,23 @@
+{
+  "name": "linked-list",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest --watch --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.6.3",
+    "nodemon": "^2.0.7"
+  },
+  "type": "module",
+  "jest": {
+    "verbose": false,
+    "testEnvironment": "jest-environment-node",
+    "transform": {}
+  }
+}
