@@ -1,0 +1,32 @@
+body{
+    margin: 0;
+    background-color: #abc;
+    font-family: monospace;
+}
+
+.container{
+    background-color: #333;
+    border: 1px solid #222;
+    margin: 1rem;
+    min-height: 47px;
+    padding: 1rem;
+}
+
+.draggable{
+    text-align: center;
+    padding: 1rem;
+    background-color: rgb(40, 240, 163);
+    color: #333;
+    font-weight: bold;
+    cursor: move;
+    max-width: 300px;
+    margin: 1rem auto 0;
+}
+
+.draggable:first-child{
+    margin-top: 0;
+}
+
+.draggable.dragging{
+    opacity: .3;
+}
